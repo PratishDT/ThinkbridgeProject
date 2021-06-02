@@ -1,0 +1,282 @@
+$gray-lighter: #eceeef !default;
+$image_path: "/assets/images/" !default;
+
+$prefix: 'sigin';
+
+.#{$prefix} {
+
+  &-conainer {
+    min-height: 100%;
+    background-size: cover;
+    padding: 100px;
+  }
+
+  &-main {
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.help {
+
+}
+
+.is-danger {
+
+}
+
+.redirect {
+  font-size: 14px;
+  margin-left: 10px;
+  color: #00AAAA;
+}
+
+.container {
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  height: 100vh;
+
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Gudea', sans-serif;
+  // background: #EA5C54;
+  background: url("../../../../assets/images/bg/login-background.jpg") no-repeat center; 
+  // background-image: "C:/Users/login/Desktop/Vand-Bharat-mission-SME-3.jpg";
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  // background: linear-gradient(335deg, #EA5C54 0%, #9000f0d7 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EA5C54 ', endColorstr='#bb6dec',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.container ::-webkit-input-placeholder {
+  color: #ced4da;
+}
+.container .authent {
+  display: none;
+  background: #35394a;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35394a', endColorstr='#1f222e',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  position: absolute;
+  left: 0;
+  right: 90px;
+  margin: auto;
+  width: 100px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 20px 70px;
+  top: 200px;
+  bottom: 0;
+  height: 70px;
+  opacity: 0;
+}
+.container .authent p {
+  text-align: center;
+  color: white;
+}
+.container .success {
+  display: none;
+  color: #d5d8e2;
+}
+.container .success p {
+  font-size: 14px;
+}
+.container p {
+  color: #5B5E6F;
+  font-size: 10px;
+  text-align: left;
+}
+.container .testtwo {
+  left: -320px !important;
+}
+.container .test {
+  box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+  top: -100px !important;
+  -webkit-transform: rotateX(70deg) scale(0.8) !important;
+          transform: rotateX(70deg) scale(0.8) !important;
+  opacity: .6 !important;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+.container .login {
+  opacity: 1;
+  top: 20px;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.25, 0.265, 0.85);
+  transition-property: opacity,box-shadow,top,left,-webkit-transform;
+  transition-property: transform,opacity,box-shadow,top,left;
+  transition-property: transform,opacity,box-shadow,top,left,-webkit-transform;
+  transition-duration: .5s;
+  -webkit-transform-origin: 161px 100%;
+          transform-origin: 161px 100%;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  position: relative;
+  width: 450px;//240px;
+  // border-top: 2px solid #D8312A;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  padding: 56px 40px 40px 40px;
+  background: white;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+ // background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35394a', endColorstr='#1f222e',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+.container .login_title {
+  color: black;
+  height: 60px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 14px;
+}
+.container .login_fields {
+  height: 208px;
+  position: absolute;
+  left: 0;
+  width: 73%;
+}
+.container .login_fields .icon {
+  position: absolute;
+    z-index: 1;
+    left: 72px;
+    top: 27px;
+    opacity: 0.5;
+}
+.container .login_fields input[type='password'] {
+  color: black !important;
+}
+.container .login_fields input[type='text'], .container .login_fields input[type='password'] {
+  color: black;
+  font-size: 18px;
+  width: 102%;
+  margin-top: 19px;
+  margin-left: 59px;
+  background: white;
+  left: 0;
+  padding: 10px 43px;
+  border-top: 2px solid white;
+  border-bottom: 1px solid #6d707e;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  font-family: 'Gudea', sans-serif;
+  box-shadow: none;
+}
+
+.container .login_fields__user .required {
+  color:#ff6161;
+  padding-left:60px;
+  font-size:14px;
+}
+
+.container .login_fields__password
+ .required {
+  position: relative;
+  color:#ff6161;
+  padding-left:30px;
+  font-size:14px;
+  bottom: 8px;
+}
+
+.container .login_fields__user, .container .login_fields__password {
+  position: relative;
+}
+
+.container .login_fields__user .alert-alert-danger {
+  position :relative;
+  left : 200px;
+  
+  bottom: 30px;
+  color:red;
+  }
+
+.container .login_fields__submit {
+   position: relative;
+ top: 35px;
+//   left: 90;
+//   width: 80%;
+  // right: 60;
+  margin-left: 60px;
+
+ }
+
+.container .login_fields__submit input {
+  border-radius: 50px;
+  background: transparent; 
+  padding: 10px 50px;
+  border: 2px solid #67B9EC ;
+  background-color: #67B9EC;
+  color: white; 
+  text-transform: uppercase;
+  font-size: 11px;
+  transition-property: background,color;
+  transition-duration: .2s;
+}
+.container .login_fields__submit input:focus {
+  box-shadow: none;
+  outline: none;
+}
+.container .login_fields__submit input:hover {
+  color: white;
+  border-color: #001b94;
+  background: #001b94;
+  cursor: pointer;
+  transition-property: background,color;
+  transition-duration: .2s;
+}
+
+.container .login_fields__submit .forgot {
+  position: relative;
+  left: 200px;
+  bottom: 90px;
+  color:#67B9EC;
+}
+
+.container .login_fields__submit .forgot:hover {
+  position: relative;
+  left: 200px;
+  bottom: 90px;
+  color:#001b94;
+  cursor: pointer;
+}
+
+.container .login_fields__password .visibilityClass {
+  position: relative;
+  bottom: 32px;
+  left: 345px;
+  color: #b5b3b0;
+  cursor: pointer;
+}
