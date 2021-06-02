@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NotificationService } from '../../../_services/notification.service';
 import { ApiService } from '../../../_services/api.service';
 import { AuthenticationService } from '../../../_services/authentication.service';
 import { Router } from '@angular/router';
@@ -14,7 +13,7 @@ import { unescapeIdentifier } from '@angular/compiler';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private notify: NotificationService, private api: ApiService,
+  constructor(private api: ApiService,
     private router: Router, private loadBar: LoadingBarService, private authService: AuthenticationService) { }
 
   loading: boolean;
@@ -45,7 +44,7 @@ export class LoginComponent implements OnInit {
     console.log("uOk", uOk);
     console.log("pOk", pOk);
     if (!uOk && !pOk) {
-      this.notify.Warn('Please put valid input', 'Input required');
+  
       setTimeout(() => {
         this.currentIndex = 1;
       }, 10);
@@ -78,15 +77,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    if (this.userId == undefined || this.password == undefined) {
-      this.isUserIdNotExists = true
-      this.ispasswordNotExists = true
-      console.log("the values are empty")
-      return;
-    }
-    if (this.loading && this.userId && this.password) {
-      this.notify.Info('Your request is in progress', 'Please wait');
-    } else {
+    
       this.loading = true;
       this.loadBar.start();
       this.api.Login(this.userId, this.password)
@@ -95,24 +86,15 @@ export class LoginComponent implements OnInit {
           const user = data['User'];
           const err = data['Error'];
           if (err !== null && err !== undefined && err !== "") {
-            this.notify.Error(err, 'Login Failed');
             this.loading = false;
             this.loadBar.stop();
-          } else {
-            //localStorage.setItem('currentUser',JSON.stringify(user));
-            this.authService.StoreLoginData(data);
-            this.notify.Success(user.FullName, 'Welcome back');
-            this.loading = false;
-            this.router.navigate(this.authService.UserHomePage());
-            this.loadBar.stop();
-          }
+          } 
         }, error => {
           console.log("error", error);
-          this.notify.ErrorDefault();
           this.loading = false;
           this.loadBar.stop();
         });
     }
-  }
+  
 
 }

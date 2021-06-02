@@ -2,13 +2,6 @@
 @import '~@ng-select/ng-select/themes/material.theme.css';
 @import "~ng-snotify/styles/material.css";
 @import "~ng-pick-datetime/assets/style/picker.min.css";
-@import '../app/_ui/core/sidemenu/sidemenu.component.scss';
-@import '../app/_ui/core/sidemenu-item/sidemenu-item.component.scss';
-@import '../app/_ui/core/navmenubar/navmenubar.component.scss';
-@import '../app/_ui/core/dashboard-widget/dashcard/dashcard.component.scss';
-@import '../app/_ui/core/dashboard-widget/profile-card/profile-card.component.scss';
-@import '../app/_ui/core/dashboard-widget/round-progressbar/round-progressbar.component.scss';
-@import '../app/_ui/core/dashboard-widget/sales-list/sales-list.component.scss';
 @import '../assets/fonts/Fontawesome/css/font-awesome.min.css';
 @import '~primeng/resources/primeng.min.css';
 @import '~primeng/resources/themes/nova-light/theme.css';
@@ -52,30 +45,16 @@ $mat-light-theme-background: (
   }
 
 
-  app-sidemenu-item{
-      @include sidemenu-item($cdk-theme,20px)
-  }
 
-  app-dashcard {
-      $dashcard-primary: mat-palette($primary);
-      $dashcard-accent:  mat-palette($accent);
-      $dashcard-warn:    mat-palette($warn);
-      $dashcard-theme:   mat-dark-theme($dashcard-primary, $dashcard-accent,$dashcard-warn);
-      @include dashcard($dashcard-theme);
-  }
 
   app-profile-card{
     $dashboard-profile-primary: mat-palette($primary , 400);
       $dashboard-profile-accent:  mat-palette($accent , 900);
       $dashboard-profile-warn:    mat-palette($warn );
       $cdk-dashboard-profile-theme:   mat-dark-theme($dashboard-profile-primary, $dashboard-profile-accent,$dashboard-profile-warn);
-      @include dashboard-profile($cdk-dashboard-profile-theme);
       @include mat-tabs-theme($cdk-dashboard-profile-theme);
   }
   @include angular-material-theme($cdk-theme);
-  @include navmenubar($cdk-theme);
-  @include round-progressbar($cdk-theme);
-  @include sales-list($cdk-theme);
 
   html {
     height:100%;

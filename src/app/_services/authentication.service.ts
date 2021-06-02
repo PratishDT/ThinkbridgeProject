@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { UserPreference, UserComp } from 'src/app/erp/app-manage/models';
 @Injectable({
     providedIn: 'root'
   })
@@ -62,37 +61,10 @@ import { UserPreference, UserComp } from 'src/app/erp/app-manage/models';
       public CurrentUser(){
         return JSON.parse(localStorage.getItem(this.userObjName));
       }
-      public EmpCode():string{
-        let _code = '';
-        let userCompanies = this.UserCompanies();
-        if(userCompanies !== undefined && userCompanies.length > 0){
-          let compConn = this.CompConn();
-          if(compConn !== undefined && compConn !== null && compConn !== ""){
-            let comp  = userCompanies.filter(function(item){
-              return item.ConnName == compConn;
-            })[0];
-            if(comp !== undefined && comp !== null){
-              _code = comp.EmpCode;
-            }
-          }else{
-            _code = userCompanies[0].EmpCode;
-          }
-        }
-        return _code;
-      }
       public UserMenus(){
         return JSON.parse(localStorage.getItem(this.userMenuObjName));
       }
-      public UserCompanies(){
-        var result:Array<UserComp> = new Array<UserComp>();
-        result = JSON.parse(localStorage.getItem(this.uCompObjName));
-        return result;
-      }
-      public UserPreference():UserPreference{
-        let uPref :UserPreference = new UserPreference();
-        uPref = JSON.parse(localStorage.getItem(this.userPreferObjName));
-        return uPref;
-      }
+     
       public UserHomePage(){
         let routes = [];
         let homepage = '/erp/home';
@@ -104,19 +76,5 @@ import { UserPreference, UserComp } from 'src/app/erp/app-manage/models';
         }
         routes.push(homepage);
         return routes;
-      }
-      public CompConn(): string {
-        let comps = this.UserCompanies();
-        if(comps && comps.length) {
-          return comps[0].ConnName;
-        }
-        return "";
-      }
-      public SideMenuCompleteHide() : boolean {
-        let uPref = this.UserPreference();
-        if(uPref !== undefined && uPref !== null){
-          return uPref.HideSideMenu;
-        }
-        return false;
       }
   }

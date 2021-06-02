@@ -36,26 +36,13 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { OwlDateTimeModule, OwlNativeDateTimeModule,OWL_DATE_TIME_LOCALE  } from 'ng-pick-datetime';
 import { FileSaverModule } from 'ngx-filesaver';
 
-import { SidemenuComponent} from './sidemenu/sidemenu.component';
-import { SidemenuItemComponent} from './sidemenu-item/sidemenu-item.component';
-import { NavmenubarComponent} from './navmenubar/navmenubar.component';
-import { ToolbarComponent} from './toolbar/toolbar.component';
-import { SidebarComponent} from './sidebar/sidebar.component';
-import { SearchBarComponent} from './search-bar/search-bar.component';
 import { ImageCroperComponent } from './image-croper/image-croper.component';
 import { FullscreenComponent} from './fullscreen/fullscreen.component';
 import { LoginComponent} from './login/login.component';
-import { ToolbarNotificationComponent} from './toolbar-notification/toolbar-notification.component';
-import { UserMenuComponent} from './user-menu/user-menu.component';
-import { DynamicTableComponent} from './dynamic-table/dynamic-table.component';
-import { RecordToolbarComponent} from './record-toolbar/record-toolbar.component';
+
 import { SanitizeHtmlPipe } from '../../_pipes/safeHtml';
 
 import { MatMenuModule} from '@angular/material/menu';
-import { DashcardComponent } from './dashboard-widget/dashcard/dashcard.component';
-import { ProfileCardComponent } from './dashboard-widget/profile-card/profile-card.component';
-import { RoundProgressbarComponent } from './dashboard-widget/round-progressbar/round-progressbar.component';
-import { SalesListComponent } from './dashboard-widget/sales-list/sales-list.component';
 import { PdfJsViewerModule } from 'ng2-pdfjs-viewer';
 import { TableModule } from 'primeng/table';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
@@ -73,10 +60,6 @@ import { MenuModule } from 'primeng/menu';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { DialogModule } from 'primeng/dialog';
 import { MatRadioModule } from '@angular/material';
-import { ExportAsModule } from 'ngx-export-as';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { OtpGenerateComponent } from './otp-generate/otp-generate.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { LoaderComponent } from './loader/loader.component';
 
 
@@ -87,7 +70,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: 'forgot', component: ForgotPasswordComponent}
 
 ];
 
@@ -161,28 +143,13 @@ const routes: Routes = [
     AlphabetsDirective,
     AlphaNumericDirective,
     NumericDirective,
-    SidemenuComponent,
-    SidemenuItemComponent,
-    NavmenubarComponent,
-    ToolbarComponent,
-    SidebarComponent,
-    SearchBarComponent,
+  
     ImageCroperComponent,
     FullscreenComponent,
     LoginComponent,
-    ToolbarNotificationComponent,
-    UserMenuComponent,
-    RecordToolbarComponent,
-    DynamicTableComponent,
-    RoundProgressbarComponent,
-    DashcardComponent,
-    ProfileCardComponent,
-    SalesListComponent,
-    RoundProgressbarComponent,
+  
     SanitizeHtmlPipe,
-    ForgotPasswordComponent,
-    OtpGenerateComponent,
-    ResetPasswordComponent,
+
     LoaderComponent,
   ],
   exports:[
@@ -222,23 +189,11 @@ const routes: Routes = [
     ImageCropperModule,
     NgxMaterialTimepickerModule,
     PerfectScrollbarModule,
-    SidemenuComponent,
-    SidemenuItemComponent,
-    NavmenubarComponent,
-    ToolbarComponent,
-    SidebarComponent,
+
     ImageCroperComponent,
     LoginComponent,
     FullscreenComponent,
-    SearchBarComponent,
-    ToolbarNotificationComponent,
-    UserMenuComponent,
-    RecordToolbarComponent,
-    DynamicTableComponent,
-    DashcardComponent,
-    RoundProgressbarComponent,
-    SalesListComponent,
-    ProfileCardComponent,
+
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
     PdfJsViewerModule,

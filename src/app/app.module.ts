@@ -11,7 +11,6 @@ import { NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { PdfJsViewerModule } from 'ng2-pdfjs-viewer';
 import { AuthGuard } from './_guards/auth.guard';
-import { NotificationService } from './_services/notification.service';
 import { ApiService } from './_services/api.service';
 import { CoreModule } from './_ui/core/core.module';
 import { MOMENT_DATE_FORMATS, MomentDateAdapter } from './moment';
@@ -35,7 +34,6 @@ import { DatePipe } from '@angular/common';
   ],
   providers: [
     AuthGuard,
-    NotificationService,
     ApiService,
     { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
     { provide : MAT_DATE_LOCALE, useValue:'en-GB' },
