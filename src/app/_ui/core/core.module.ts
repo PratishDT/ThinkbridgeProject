@@ -35,13 +35,8 @@ import { ImageCropperModule } from 'ngx-image-cropper';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { OwlDateTimeModule, OwlNativeDateTimeModule,OWL_DATE_TIME_LOCALE  } from 'ng-pick-datetime';
 import { FileSaverModule } from 'ngx-filesaver';
-
-import { ImageCroperComponent } from './image-croper/image-croper.component';
-import { FullscreenComponent} from './fullscreen/fullscreen.component';
 import { LoginComponent} from './login/login.component';
-
 import { SanitizeHtmlPipe } from '../../_pipes/safeHtml';
-
 import { MatMenuModule} from '@angular/material/menu';
 import { PdfJsViewerModule } from 'ng2-pdfjs-viewer';
 import { TableModule } from 'primeng/table';
@@ -143,9 +138,6 @@ const routes: Routes = [
     AlphabetsDirective,
     AlphaNumericDirective,
     NumericDirective,
-  
-    ImageCroperComponent,
-    FullscreenComponent,
     LoginComponent,
   
     SanitizeHtmlPipe,
@@ -159,7 +151,9 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatSelectModule,
     FlexLayoutModule,
-    MatSidenavModule, MatSliderModule, MatProgressBarModule,
+    MatSidenavModule, 
+    MatSliderModule,
+     MatProgressBarModule,
     MatListModule,
     MatButtonModule,
     MatDatepickerModule,
@@ -189,11 +183,7 @@ const routes: Routes = [
     ImageCropperModule,
     NgxMaterialTimepickerModule,
     PerfectScrollbarModule,
-
-    ImageCroperComponent,
     LoginComponent,
-    FullscreenComponent,
-
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
     PdfJsViewerModule,
@@ -224,7 +214,6 @@ const routes: Routes = [
     DialogModule,
   ],
   entryComponents:[
-    ImageCroperComponent
   ],
    providers: [
         {
